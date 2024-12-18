@@ -1,5 +1,5 @@
 #include "gameboard.h"
-#include <stdexpect>
+#include <stdexcept>
 
 
 Player &GameBoard::getPlayer(PlayerType target) {
