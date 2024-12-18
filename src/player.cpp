@@ -1,5 +1,5 @@
 #include "player.h"
-#include <stdexpect>
+#include <stdexcept>
 
 Player::Player(int m) : money(m) {}
 
