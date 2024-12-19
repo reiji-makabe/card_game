@@ -2,24 +2,24 @@
 #define DECK_H
 
 #include <vector>
-#include <random>
-#include "Card.h"
+#include "card.h"
+#include "randomengine.h"
 
 class Deck {
 private:
 	std::vector<Card> cards;
-	std::default_random_engine engine;
 
 public:
 	Deck(bool isUseJoker);
 
 	void	initializeDeck(bool isUseJoker);
 	void	shuffle();
-	size_t	size() const;
 	void	addCard(const Card& card);
 	void	drawCard();
-	size_t	size() const;
 	void	printDeck() const;
+
+	size_t size() const { return cards.size(); }
+
 };
 
 #endif

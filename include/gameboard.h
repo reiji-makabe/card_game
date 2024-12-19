@@ -26,12 +26,12 @@ public:
 
 	std::vector<Card> showPlayerCard(PlayerType target);
 
-	int getPlayerScore();
-	int getPlayerMoney();
-	void adjustPlayerScore(int num);
-	void adjustPlayerMoney(int num);
-	void setPlayerScore(int num);
-	void setPlayerMoney(int num);
+	int GameBoard::getPlayerScore() { return player.getScore(); } 
+	int GameBoard::getPlayerMoney() { return player.getMoney(); }
+	void GameBoard::adjustPlayerScore(int num) { player.adjustScore(num); }
+	void GameBoard::adjustPlayerMoney(int num) { player.adjustMoney(num); }
+	void GameBoard::setPlayerScore(int num) { player.setScore(num); }
+	void GameBoard::setPlayerMoney(int num) { player.setMoney(num); }
 };
 
 #endif

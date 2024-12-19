@@ -17,10 +17,11 @@ private:
 	Rank	rank;
 
 public:
-    Card(Suit s, Rank r);
-	Suit getSuit() const;
-	Rank getRank() const;
+	Card(Suit s, Rank r) : suit(s), rank(r) {}
+	Suit getSuit() const { return suit; }
+	Rank getRank() const { return rank; }
 	std::string toString() const;
+
 };
 
 #endif

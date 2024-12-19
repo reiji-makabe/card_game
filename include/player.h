@@ -19,12 +19,11 @@ public:
 	void	receiveCard(const Card& card);
 	Card	discardCard(int index);
 
-	int		getMoney()	const;
-	int		getScore()	const;
-	void	setMoney(int num);
-	void	setScore(int num);
-	void	adjustMoney(int num);
-	void	adjustScore(int num);
+	int Player::getMoney()	const { return money; }
+	int Player::getScore()	const { return score; }
+	void Player::setMoney(int num) { money = num; }
+	void Player::setScore(int num) { score = num; }
+	void Player::adjustMoney(int num) { money += num }
+	void Player::adjustScore(int num) { score += num }
 };
-
 #endif

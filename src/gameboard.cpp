@@ -33,27 +33,3 @@ std::vector<Card> GameBoard::showPlayerCard(PlayerType target) {
 	Player &selectPlayer = getPlayer(target);
 	return selectPlayer.showHand();
 }
-
-int GameBoard::getPlayerScore() {
-	return player.getScore();
-} 
-
-int GameBoard::getPlayerMoney() {
-	return player.getMoney();
-}
-
-void GameBoard::adjustPlayerScore(int num) {
-	player.adjustScore(num);
-}
-
-void GameBoard::adjustPlayerMoney(int num) {
-	player.adjustMoney(num);
-}
-
-void GameBoard::setPlayerScore(int num) {
-	player.setScore(num);
-}
-
-void GameBoard::setPlayerMoney(int num) {
-	player.setMoney(num);
-}

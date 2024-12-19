@@ -1,12 +1,7 @@
 #include "deck.h"
-#include <chrono>
 #include <algorithm>
 
 Deck::Deck(bool isUseJoker) {
-	// create random engine
-	unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-	engine = std::default_random_engine(seed);
-
 	initializeDeck(isUseJoker);
 }
 
@@ -23,11 +18,7 @@ void Deck::initializeDeck(bool isUseJoker) {
 }
 
 void Deck::shuffle() {
-	std::shuffle(cards.begin(), cards.end(), engine);
-}
-
-size_t Deck::size() const {
-	return cards.size();
+	std::shuffle(cards.begin(), cards.end(), RandomEngine::getEngine());
 }
 
 void Deck::addCard(const Card& card) {
@@ -42,8 +33,6 @@ void Deck::drawCard() {
 	cards.pop_back();
 	return card;
 }
-
-size_t Deck::size() const { return cards.size(); }
 
 void Deck::printDeck() const {
 	int i = 0;

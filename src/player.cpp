@@ -23,27 +23,3 @@ Card discardCard(int index) {
 		throw std::out_of_range("Invalid index for discardCard");
 	}
 }
-
-int Player::getMoney()	const {
-	return money;
-}
-
-int Player::getScore()	const {
-	return score;
-}
-
-void Player::setMoney(int num) {
-	money = num;
-}
-
-void Player::setScore(int num) {
-	score = num;
-}
-
-void Player::adjustMoney(int num) {
-	money += num
-}
-
-void Player::adjustScore(int num) {
-	score += num
-}

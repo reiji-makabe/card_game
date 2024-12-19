@@ -1,10 +1,5 @@
 #include "card.h"
 
-Card::Card(Suit s, Rank r) : suit(s), rank(r) {}
-
-Suit Card::getSuit() const { return suit; }
-Rank Card::getRank() const { return rank; }
-
 std::string Card::toString() const {
 	std::string	S, R;
 
