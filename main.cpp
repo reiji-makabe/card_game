@@ -6,4 +6,5 @@ int	main(void) {
 
 	game_master.getGameMode();
 	game_master.startGame();
+//	game_master.isContinue(); todo
 }
