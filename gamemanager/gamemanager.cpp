@@ -4,12 +4,12 @@
 #include <limit>
 
 
-
+// Mistakes trigger sarcasm. After depletion, a warning is given(isWarningGiven = true), and further mistakes end the game.
 void displayInsult(SnarkBot::MessageType type) {
-	static bool flag = false;
+	static bool isWarningGiven = false;
 	std::string msg;
 
-	if (flag) {
+	if (isWarningGiven) {
 		std::cout << "Bye.\n";
 		exit(0); // todo:Maybe exit isn't appropriate because of destructors and such
 	}
@@ -18,7 +18,7 @@ void displayInsult(SnarkBot::MessageType type) {
 	if (msg == "") {
 		std::cout << "Are you satisfied now? It seems my vocabulary is insufficient to praise you any further.\n";
 		std::cout << "Please choose whether to end the game or proceed properly.\n";
-		flag = true;
+		isWarningGiven = true;
 	}
 	std::cout << msg << std::endl;
 }
